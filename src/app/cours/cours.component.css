@@ -1,0 +1,93 @@
+/* Section Cours */
+.tab-pane#cours {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  /* Carte (panel) de la section */
+  .e-panel {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Titre de la carte */
+  .card-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Tableau des cours */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+  }
+  
+  .table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .table td {
+    background-color: #f9f9f9;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .table .btn {
+    margin-right: 5px;
+  }
+  
+  /* Boutons */
+  .btn {
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 5px 10px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+  }
+  
+  /* Checkbox */
+  input[type="checkbox"] {
+    margin-top: 0.2rem;
+  }
+  
+  /* Réactivité */
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  /* Espacement général */
+  .card-body {
+    padding: 20px;
+  }
+  
+  /* Styling des actions */
+  .btn-sm {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+  

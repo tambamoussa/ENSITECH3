@@ -1,0 +1,108 @@
+/* Style général pour le Dashboard */
+.container {
+    padding-top: 50px;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .card-text {
+    font-size: 1.5rem;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .row {
+    margin-top: 30px;
+  }
+  
+  /* Graphique */
+/* Graphique - Taille réduite */
+#dashboardChart {
+    width: 100%; /* Largeur maximale du conteneur parent */
+    max-width: 600px; /* Limiter la largeur pour des écrans larges */
+    height: 300px; /* Réduire la hauteur */
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centrer le graphique */
+}
+
+  
+  /* Ajouter un peu d'espace entre les cartes */
+  .col-md-4 {
+    padding: 15px;
+  }
+  
+  /* Style du bouton et de l'interface */
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  
+  .card-body a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .card-body a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
+  /* Style des titres de section */
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  h5 {
+    font-size: 1.25rem;
+    color: #555;
+  }
+  
+  .text-center {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Style pour le graphique et la carte */
+  .graph-container {
+    padding: 20px;
+  }
+  
+  .graph-container canvas {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 767px) {
+    .col-md-4 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .card {
+      margin-bottom: 20px;
+    }
+  
+    #dashboardChart {
+      height: 250px;
+    }
+  }
+  

@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+ <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Nombre d'Étudiants</h5>
+            <p class="card-text">{{ studentsCount }}</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Nombre d'Enseignants</h5>
+            <p class="card-text">{{ teachersCount }}</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Nombre de Cours</h5>
+            <p class="card-text">{{ coursesCount }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <canvas id="dashboardChart" baseChart
+          [datasets]="chartData.datasets"
+          [labels]="chartData.labels"
+          [options]="chartOptions"
+          [type]="chartType">
+        </canvas>
+      </div>
+    </div>
+  </div>
+  

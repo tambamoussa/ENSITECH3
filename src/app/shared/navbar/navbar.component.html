@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">ENSITECH</a>
+    <ul class="nav nav-tabs ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active" role="tab">Accueil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/enseignant" routerLinkActive="active" role="tab">Enseignants</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/etudiant" routerLinkActive="active" role="tab">Étudiants</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/cours" routerLinkActive="active" role="tab">Cours</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="logout()" role="tab">Se déconnecter</a>
+      </li> 
+    </ul>
+  </div>
+</nav>

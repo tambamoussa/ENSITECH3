@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="login">
+      <img src="../assets/img/logo.jpeg" class="app-logo" alt="logo" />
+      <form (ngSubmit)="onSubmit()">
+        <div class="input-group mb-3">
+          <span class="input-group-text"><i class="bi-envelope-at-fill"></i></span>
+          <input type="text" class="form-control border border-primary rounded" placeholder="E-mail" [(ngModel)]="email" name="email" required />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text"><i class="bi-lock-fill"></i></span>
+          <input type="password" class="form-control border border-primary rounded" placeholder="Mot de passe" [(ngModel)]="password" name="password" required />
+        </div>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary bg-blue rounded">
+            Se connecter
+          </button>
+          <br />
+          <p class="text-center">
+            <a routerLink="/reinitialize-password">Mot de passe oublié ?</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+  

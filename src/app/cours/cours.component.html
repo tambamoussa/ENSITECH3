@@ -1,0 +1,71 @@
+<!-- Section Cours -->
+<div class="tab-pane fade show active" id="cours" role="tabpanel">
+  <app-navbar></app-navbar>
+    <div class="e-panel card">
+      <div class="card-body">
+        <!-- Bouton pour Ajouter un Cours -->
+        <button class="btn btn-success mb-3" (click)="resetSelectedCours(); openModal()">Ajouter Cours</button>
+  
+        <!-- Tableau des cours -->
+        <div class="table-responsive mt-4">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Code</th>
+                <th>Intitulé</th>
+                <th>Enseignant</th>
+                <th>Durée</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let cours of coursList">
+                <td><input type="checkbox" [id]="'cours-' + cours.id"></td>
+                <td>{{ cours.code }}</td>
+                <td>{{ cours.intitule }}</td>
+                <td>{{ cours.enseignant }}</td>
+                <td>{{ cours.duree }} heures</td>
+                <td>
+                  <button class="btn btn-sm btn-primary" (click)="editCours(cours); openModal()">Modifier</button>
+                  <button class="btn btn-sm btn-danger" (click)="deleteCours(cours.id)">Supprimer</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+     <!-- Modale pour Ajouter/Modifier un Cours -->
+<div class="modal fade" id="coursModal" tabindex="-1" aria-labelledby="coursModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="coursModalLabel">{{ selectedCours?.id ? 'Modifier le Cours' : 'Ajouter un Cours' }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="selectedCours?.id ? updateCours() : createCours(selectedCours)">
+            <div class="form-group">
+              <label for="code">Code</label>
+              <!-- Check si selectedCours n'est pas null avant d'utiliser ngModel -->
+              <input *ngIf="selectedCours" type="text" class="form-control" id="code" [(ngModel)]="selectedCours.code" name="code" required>
+            </div>
+            <div class="form-group">
+              <label for="intitule">Intitulé</label>
+              <input *ngIf="selectedCours" type="text" class="form-control" id="intitule" [(ngModel)]="selectedCours.intitule" name="intitule" required>
+            </div>
+            <div class="form-group">
+              <label for="enseignant">Enseignant</label>
+              <input *ngIf="selectedCours" type="text" class="form-control" id="enseignant" [(ngModel)]="selectedCours.enseignant" name="enseignant" required>
+            </div>
+            <div class="form-group">
+              <label for="duree">Durée (en heures)</label>
+              <input *ngIf="selectedCours" type="number" class="form-control" id="duree" [(ngModel)]="selectedCours.duree" name="duree" required>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">{{ selectedCours?.id ? 'Mettre à jour' : 'Ajouter' }}</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
